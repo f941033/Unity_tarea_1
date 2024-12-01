@@ -20,16 +20,19 @@ public class MoveItems : MonoBehaviour
     {
         if(other.tag == "item")
         {
-            if(Input.GetMouseButton(0))
+            Debug.Log("tocando item");
+
+            if (Input.GetMouseButton(0))
             {
-                //other.transform.parent = transform;
-                other.transform.forward = transform.forward;
+                other.transform.parent = transform;
+                //other.transform.forward = transform.forward;
                 other.transform.position = transform.position;
                 other.GetComponent<Rigidbody>().useGravity = false;
+                Debug.Log("cogiendo item");
             }
             else
             {
-                //other.transform.parent = null;                
+                other.transform.parent = null;                
                 other.GetComponent<Rigidbody>().useGravity = true;
             }
         }
