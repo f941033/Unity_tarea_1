@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FlythroughCam
   - item
+  - item_terremoto
   layers:
   - Default
   - TransparentFX
