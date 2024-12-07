@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveItems : MonoBehaviour
 {
+    bool haCogido = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,23 +20,34 @@ public class MoveItems : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "item")
+        if(other.tag == "item" || other.tag == "item_terremoto")
         {
             Debug.Log("tocando item");
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0)  )
             {
-                other.transform.parent = transform;
-                //other.transform.forward = transform.forward;
-                other.transform.position = transform.position;
-                other.GetComponent<Rigidbody>().useGravity = false;
-                Debug.Log("cogiendo item");
+                if (!haCogido)
+                {
+                    Debug.Log("cogiendo item");
+                    haCogido=true;
+                    other.transform.parent = transform;
+                    other.transform.position = transform.position;
+                    other.GetComponent<Rigidbody>().isKinematic = true;
+                }
+
+
             }
             else
             {
-                other.transform.parent = null;                
-                other.GetComponent<Rigidbody>().useGravity = true;
+                if (haCogido)
+                    {
+                        Debug.Log("soltando item");
+                        haCogido=false;
+                        other.transform.parent = null;
+                        other.GetComponent<Rigidbody>().isKinematic = false;
+                    }
             }
+            
         }
     }
 }

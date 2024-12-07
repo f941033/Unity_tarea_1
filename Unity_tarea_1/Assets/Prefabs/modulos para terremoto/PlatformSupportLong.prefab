@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3809727596488928739
+--- !u!1 &3764619828123588676
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4761551244225363880}
-  - component: {fileID: 4123988412943252973}
-  - component: {fileID: 8851607679856502980}
-  - component: {fileID: 2009496035971419963}
+  - component: {fileID: 5062072140011661222}
+  - component: {fileID: 6114744954138685956}
+  - component: {fileID: 3833906856003756591}
+  - component: {fileID: 3653077116367393273}
+  - component: {fileID: 7042716825218812542}
   m_Layer: 0
-  m_Name: pasarela_peque
-  m_TagString: Untagged
+  m_Name: PlatformSupportLong
+  m_TagString: item_terremoto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4761551244225363880
+--- !u!4 &5062072140011661222
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809727596488928739}
+  m_GameObject: {fileID: 3764619828123588676}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.39184737, z: 0, w: 0.9200303}
-  m_LocalPosition: {x: 50.77801, y: 62.177982, z: -37.116386}
-  m_LocalScale: {x: 1, y: 0.053057045, z: 0.3408}
+  m_LocalRotation: {x: -0.9999986, y: 0.0016667427, z: 0, w: 0}
+  m_LocalPosition: {x: 51.683, y: 20.002, z: 88.874176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -46.139, z: 0}
---- !u!33 &4123988412943252973
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0.19099426}
+--- !u!33 &6114744954138685956
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809727596488928739}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8851607679856502980
+  m_GameObject: {fileID: 3764619828123588676}
+  m_Mesh: {fileID: 4300000, guid: a611559d1a5b571428a74779e59cf14d, type: 3}
+--- !u!23 &3833906856003756591
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809727596488928739}
+  m_GameObject: {fileID: 3764619828123588676}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c7359736668e2644cb62db1f185075bd, type: 2}
+  - {fileID: 2100000, guid: fc0e77f5aef3d184f9195be79bd31eeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,13 +88,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2009496035971419963
+--- !u!54 &3653077116367393273
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3764619828123588676}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7042716825218812542
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3809727596488928739}
+  m_GameObject: {fileID: 3764619828123588676}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,5 +134,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.9989855, y: 0.98723644, z: 1.0018616}
+  m_Center: {x: 1.9905585, y: -0.49361655, z: 0.00093078613}
