@@ -10,8 +10,8 @@ namespace Personaje
 
         private PlayerLocomotionInput _playerLocomotionInput;
 
-        private static int inputXHash = Animator.StringToHash("inputX");
-        private static int inputYHash = Animator.StringToHash("inputY");
+        private static int inputXHash = Animator.StringToHash("InputX");
+        private static int inputYHash = Animator.StringToHash("InputY");
 
         private void Awake()
         {
