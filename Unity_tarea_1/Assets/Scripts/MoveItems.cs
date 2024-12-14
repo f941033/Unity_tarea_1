@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveItems : MonoBehaviour
 {
     bool haCogido = false;
+    public Transform grabPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +31,8 @@ public class MoveItems : MonoBehaviour
                 {
                     Debug.Log("cogiendo item");
                     haCogido=true;
-                    other.transform.parent = transform;
-                    other.transform.position = transform.position;
+                    other.transform.parent = grabPoint.transform;
+                    other.transform.position = grabPoint.transform.position;
                     other.GetComponent<Rigidbody>().isKinematic = true;
                 }
 
