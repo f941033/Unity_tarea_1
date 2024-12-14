@@ -9,9 +9,8 @@ namespace Personaje
  public class PlayerLocomotionInput : MonoBehaviour, PlayerControls.IPlayerLocoMotionMapaActions
     {
         public PlayerControls PlayerControls { get ; private set; }
-        public Vector2 MovementInput {  get; private set; }
-        public Vector2 LookInput { get; private set; }
-
+        public Vector2 MovementInput;
+        public Vector2 LookInput;
         private void OnEnable()
         {
             PlayerControls = new PlayerControls();
